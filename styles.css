@@ -13,13 +13,13 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ajuste para colocar o logo na lateral direita */
+    justify-content: center; /* Centraliza o conteúdo */
+    position: relative; /* Necessário para posicionar o logo à esquerda */
 }
 
 .logo {
-    margin-left: auto; /* Mover o logo para a direita */
-    display: flex;
-    align-items: center;
+    position: absolute;
+    left: 20px; /* Ajuste a distância do logo da borda esquerda */
 }
 
 .logo img {
@@ -32,6 +32,8 @@ h1 {
     margin: 0;
     font-size: 24px;
     color: #333;
+    text-align: center;
+    flex-grow: 1; /* Faz o título ocupar o espaço disponível */
 }
 
 #intro {
@@ -114,6 +116,26 @@ section {
 
 #contato button:hover {
     background-color: #2678d4;
+}
+
+#contato p {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#contato a {
+    text-decoration: none;
+    color: #3897f0;
+    font-size: 16px;
+    margin-left: 10px; /* Espaço entre o texto e o ícone */
+}
+
+#contato .instagram-icon {
+    width: 24px; /* Ajustar o tamanho do ícone */
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
 }
 
 footer {
