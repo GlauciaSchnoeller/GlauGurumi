@@ -1,4 +1,3 @@
-/* Estilo Global */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -13,19 +12,19 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza o conteúdo */
-    position: relative; /* Necessário para posicionar o logo à esquerda */
+    justify-content: center; 
+    position: relative; 
 }
 
 .logo {
     position: absolute;
-    left: 20px; /* Ajuste a distância do logo da borda esquerda */
+    left: 20px; 
 }
 
 .logo img {
-    width: 50px; /* Ajustar o tamanho do logo */
+    width: 50px;
     height: 50px;
-    border-radius: 50%; /* Tornar o logo redondo */
+    border-radius: 50%; 
 }
 
 h1 {
@@ -33,7 +32,7 @@ h1 {
     font-size: 24px;
     color: #333;
     text-align: center;
-    flex-grow: 1; /* Faz o título ocupar o espaço disponível */
+    flex-grow: 1; 
 }
 
 #intro {
@@ -128,14 +127,14 @@ section {
     text-decoration: none;
     color: #3897f0;
     font-size: 16px;
-    margin-left: 10px; /* Espaço entre o texto e o ícone */
+    margin-left: 10px; 
 }
 
 #contato .instagram-icon {
-    width: 24px; /* Ajustar o tamanho do ícone */
+    width: 24px; 
     height: 24px;
     vertical-align: middle;
-    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    margin-right: 10px;
 }
 
 footer {
@@ -144,4 +143,65 @@ footer {
     background-color: #fff;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #intro {
+        font-size: 16px;
+    }
+
+    #galeria .feed .foto {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        text-align: center;
+    }
+
+    .logo img {
+        width: 30px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    #intro {
+        font-size: 14px;
+    }
+
+    #galeria .feed .foto {
+        width: calc(100% - 20px);
+    }
+
+    #contato input,
+    #contato textarea {
+        font-size: 14px;
+    }
+
+    #contato button {
+        font-size: 14px;
+    }
 }
