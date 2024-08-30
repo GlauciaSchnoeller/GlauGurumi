@@ -1,11 +1,10 @@
 # GlauGurumi
-Bem-vindo à página oficial do GlauGurumi! 
+Welcome to the official GlauGurumi website!
 
-Aqui você encontrará uma coleção de artesanatos feitos à mão, com destaque para amigurumis e outras criações artísticas. 
+Here you will find a collection of handmade crafts, with a focus on amigurumis and other artistic creations.
 
-## Sobre
-GlauGurumi é um projeto dedicado à criação de peças artesanais únicas, feitas com muita dedicação.
+## About
+GlauGurumi is a project dedicated to creating unique, handcrafted pieces, made with great dedication.
 
-## Galeria
-Confira nossas criações na [galeria online](https://seuusuario.github.io/glaugurumi).
-
+## Gallery
+Check out our creations in the [online gallery](https://glauciaschnoeller.github.io/glaugurumi).
