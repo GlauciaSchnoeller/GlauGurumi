@@ -6,8 +6,7 @@
     <title>GlauGurumi</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -28,22 +27,47 @@
         <h2>Galeria de Fotos</h2>
         <div class="feed">
             <div class="foto">
-                <img src="images/cat.jpg" alt="Descrição da peça 1">
+                <img src="images/cat.jpg" alt="Descrição da peça 1" onclick="openLightbox('images/cat.jpg')">
                 <p>
                     Gatinha feita com inspiração no modelo do Gato Lumi Glow (receita em 
-                    <a href="https://www.circulo.com.br/receitas" target="_blank" rel="Círculo">Círculo</a>
-                )</p>
+                    <a href="https://www.circulo.com.br/receitas" target="_blank" rel="Círculo">Círculo</a>)
+                </p>
             </div>
             <div class="foto">
-                <img src="images/finger_heart.jpg" alt="Descrição da peça 2">
+                <img src="images/finger_heart.jpg" alt="Descrição da peça 2" onclick="openLightbox('images/finger_heart.jpg')">
                 <p>
                     Coração<br>
                     (receita em 
                     <a href="https://www.youtube.com/watch?v=rnS7Nnusb-4" target="_blank" rel="youtube">
                         Ateliê Toca do Amigu)
                     </a>
+                </p>
             </div>
             <!-- Adicionar mais fotos -->
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>Galeria de Vídeos</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <video controls width="100%">
+                        <source src="videos/video1.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos HTML5.
+                    </video>
+                </div>
+                <div class="swiper-slide">
+                    <video controls width="100%">
+                        <source src="videos/video2.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos HTML5.
+                    </video>
+                </div>
+                <!-- Incluir os vídeos -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -59,5 +83,8 @@
     <footer>
         <p>&copy; 2024 GlauGurumi</p>
     </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
