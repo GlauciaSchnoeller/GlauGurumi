@@ -23,7 +23,7 @@
         </p>
     </section>
 
-    <section id="galeria">
+    <section id="gallery">
         <h2>Galeria de Fotos</h2>
         <div class="feed">
             <div class="foto">
@@ -73,16 +73,25 @@
 
     <section id="contato">
         <h2>Contato</h2>
-        <p>Siga-nos no <br>
+        <p>Siga-nos no:</p>
+        <p>
+            <i class="fa-brands fa-instagram"></i> 
             <a href="https://www.instagram.com/glaugurumi" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-instagram"></i> Instagram - GlauGurumi
+                Instagram - GlauGurumi
             </a>
         </p>
+
     </section>
 
     <footer>
         <p>&copy; 2024 GlauGurumi</p>
     </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts.js"></script>
