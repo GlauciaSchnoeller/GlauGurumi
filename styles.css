@@ -1,8 +1,8 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Quicksand', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fafafa;
+    background-color: #fffaf0;
     color: #333;
 }
 
@@ -12,129 +12,162 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: center; 
-    position: relative; 
+    justify-content: center;
+    position: relative;
 }
 
 .logo {
     position: absolute;
-    left: 20px; 
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .logo img {
     width: 50px;
     height: 50px;
-    border-radius: 50%; 
+    border-radius: 50%;
+    border: 2px solid #f0c0c0;
 }
 
 h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
     margin: 0;
-    font-size: 24px;
-    color: #333;
+    color: #d2691e;
     text-align: center;
-    flex-grow: 1; 
 }
 
 #intro {
     text-align: center;
-    padding: 20px;
+    padding: 25px 15px;
     font-size: 18px;
+    line-height: 1.6;
+    color: #555;
 }
 
 section {
-    padding: 20px;
-    max-width: 1200px;
+    padding: 25px 15px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-#gallery {
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
     text-align: center;
+    margin-bottom: 20px;
+    color: #d2691e;
+}
+
+#gallery {
+    margin-bottom: 40px;
 }
 
 .feed {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-}
-
-.feed .foto {
-    background-color: #fff;
-    border: 1px solid #e6e6e6;
-    padding: 10px;
-    width: calc(33.333% - 40px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.feed .foto img {
+    position: relative;
     width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    max-width: 765px;
+    margin: 0 auto;
+    padding-top: 66.66%;
 }
 
-#contato {
-    background-color: #fff;
-    padding: 40px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
+.feed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
-#contato form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px;
+#contact {
+    padding: 30px 20px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-#contato label {
-    align-self: flex-start;
-    margin-bottom: 5px;
+.contact-links,
+.contact-form-container {
+    background: #fff8f0;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-#contato input,
-#contato textarea {
+.contact-links h3,
+.contact-form-container h3 {
+    margin-top: 0;
+    font-family: 'Dancing Script', cursive;
+    color: #d2691e;
+}
+
+.contact-links p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contact-links i {
+    margin-right: 8px;
+    color: #d2691e;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-top: 0.5rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid #e6c2b3;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
 }
 
-#contato button {
-    padding: 10px 20px;
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d2691e;
+    box-shadow: 0 0 6px rgba(210, 105, 30, 0.3);
+    outline: none;
+}
+
+.contact-form button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
     border: none;
-    background-color: #3897f0;
+    border-radius: 8px;
+    background: #d2691e;
     color: white;
-    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
-#contato button:hover {
-    background-color: #2678d4;
-}
-
-#contato p {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-}
-
-#contato a {
-    text-decoration: none;
-    color: #3897f0;
-    font-size: 16px;
-    margin-left: 10px; 
-}
-
-#contato .instagram-icon {
-    width: 24px; 
-    height: 24px;
-    vertical-align: middle;
-    margin-right: 10px;
+.contact-form button:hover {
+    background: #b25515;
+    transform: translateY(-2px);
 }
 
 footer {
@@ -143,108 +176,74 @@ footer {
     background-color: #fff;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
+    font-size: 14px;
+    color: #555;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .logo {
-        position: static;
-        margin-bottom: 10px;
-    }
-
-    .logo img {
-        width: 40px;
-        height: 40px;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     h1 {
-        font-size: 20px;
+        font-size: 28px;
+        text-align: center;
     }
 
     #intro {
         font-size: 16px;
     }
 
-    #gallery .feed .foto {
-        width: calc(50% - 20px);
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
-    header {
-        text-align: center;
-    }
-
-    .logo img {
-        width: 30px;
+    .logo {
+        left: 10px;
     }
 
     h1 {
-        font-size: 18px;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
     }
 
     #intro {
-        font-size: 14px;
-    }
-
-    #gallery .feed .foto {
-        width: calc(100% - 20px);
-    }
-
-    #contato input,
-    #contato textarea {
-        font-size: 14px;
-    }
-
-    #contato button {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
-/* Estilo do Lightbox */
-.lightbox {
-    display: none;
+#floating-message {
     position: fixed;
-    z-index: 999;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8);
+    bottom: 20px;
+    right: 20px;
+    background-color: #d2691e;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    z-index: 9999;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.lightbox-content {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 80%;
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.swiper-slide {
-    width: calc(33.333% - 40px);
-    margin-bottom: 20px;
-}
-
-.swiper-slide video {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+#floating-message.show {
+    opacity: 1;
+    transform: translateY(0);
 }
