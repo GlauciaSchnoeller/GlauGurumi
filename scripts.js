@@ -1,21 +1,13 @@
-function openLightbox(src) {
-    document.getElementById('lightbox').style.display = 'block';
-    document.getElementById('lightbox-img').src = src;
-}
+document.querySelectorAll('.coming-soon').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
 
-function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-}
+        const floatingMessage = document.getElementById('floating-message');
+        floatingMessage.textContent = "Em breve!";
+        floatingMessage.classList.add('show');
 
-var swiper = new Swiper('.swiper-container', {
-    spaceBetween: 10,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    loop: true,
+        setTimeout(() => {
+            floatingMessage.classList.remove('show');
+        }, 3000);
+    });
 });
