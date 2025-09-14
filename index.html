@@ -1,99 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="GlauGurumi - Amigurumis feitos com carinho. Confira nossas fotos e entre em contato!">
     <title>GlauGurumi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo.jpeg" alt="Logo do GlauGurumi">
+            <img src="images/logo.png" alt="Logo GlauGurumi">
         </div>
         <h1>GlauGurumi</h1>
     </header>
 
     <section id="intro">
         <p>
-            Sou uma exploradora de crochê desde os meus 10 anos<br>
-            Esta página é meu cantinho para compartilhar a reprodução de receita e criação de novas peças 🧶
+            Sou uma exploradora de crochê desde os meus 10 anos.<br>
+            Esta página é meu cantinho para compartilhar a reprodução de receitas e criação de novas peças 🧶
         </p>
     </section>
 
     <section id="gallery">
         <h2>Galeria de Fotos</h2>
         <div class="feed">
-            <div class="foto">
-                <img src="images/cat.jpg" alt="Descrição da peça 1" onclick="openLightbox('images/cat.jpg')">
-                <p>
-                    Gatinha feita com inspiração no modelo do Gato Lumi Glow (receita em 
-                    <a href="https://www.circulo.com.br/receitas" target="_blank" rel="Círculo">Círculo</a>)
-                </p>
-            </div>
-            <div class="foto">
-                <img src="images/finger_heart.jpg" alt="Descrição da peça 2" onclick="openLightbox('images/finger_heart.jpg')">
-                <p>
-                    Coração<br>
-                    (receita em 
-                    <a href="https://www.youtube.com/watch?v=rnS7Nnusb-4" target="_blank" rel="youtube">
-                        Ateliê Toca do Amigu)
-                    </a>
-                </p>
-            </div>
-            <!-- Adicionar mais fotos -->
+            <iframe src="https://snapwidget.com/embed/1107741" class="snapwidget-widget" allowtransparency="true"
+                frameborder="0" scrolling="no"
+                style="border:none; overflow:hidden; width:100%; max-width:765px; height:510px;"
+                title="Posts do Instagram"></iframe>
         </div>
     </section>
 
-    <section id="videos">
-        <h2>Galeria de Vídeos</h2>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <video controls width="100%">
-                        <source src="videos/video1.mp4" type="video/mp4">
-                        Seu navegador não suporta vídeos HTML5.
-                    </video>
-                </div>
-                <div class="swiper-slide">
-                    <video controls width="100%">
-                        <source src="videos/video2.mp4" type="video/mp4">
-                        Seu navegador não suporta vídeos HTML5.
-                    </video>
-                </div>
-                <!-- Incluir os vídeos -->
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
-
-    <section id="contato">
+    <section id="contact">
         <h2>Contato</h2>
-        <p>Siga-nos no:</p>
-        <p>
-            <i class="fa-brands fa-instagram"></i> 
-            <a href="https://www.instagram.com/glaugurumi" target="_blank" rel="noopener noreferrer">
-                Instagram - GlauGurumi
-            </a>
-        </p>
+        <div class="contact-container">
+            <div class="contact-links">
+                <h3>Minhas páginas</h3>
+                <p><i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.instagram.com/glaugurumi" target="_blank"
+                        rel="noopener noreferrer">Instagram</a>
+                </p>
+                <p><i class="fa-brands fa-whatsapp"></i>
+                    <a href="#" class="coming-soon">WhatsApp</a>
+                </p>
+                <p><i class="fa-brands fa-shopify"></i>
+                    <a href="#" class="coming-soon">Loja Shopee</a>
+                </p>
+            </div>
 
+            <div class="contact-form-container">
+                <h3>Envie sua mensagem</h3>
+                <form action="https://formspree.io/f/xeolwolo" method="POST" class="contact-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <div class="g-recaptcha" data-sitekey="6Lc1qMkrAAAAAFoygkj5WyvxbxDFeo0v-yM5ifPC"></div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 GlauGurumi</p>
     </footer>
 
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
+    <div id="floating-message"></div>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts.js"></script>
 </body>
+
 </html>
